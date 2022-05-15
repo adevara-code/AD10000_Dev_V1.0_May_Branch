@@ -1,0 +1,23 @@
+<h2 style="color:#ff5100;"> User List</h2>
+   <table class = "table table-striped">
+     <thead>
+        <tr>
+            <th style="color:#ff5100;"> USER ID </th>
+            <th style="color:#ff5100;"> USERNAME</th>
+            <th style="color:#ff5100;"> EMAILID </th>
+        </tr>
+      </thead>
+    <tbody>
+        <tr *ngFor = "let user of users" >
+            <td style="color:#ff5100;"> {{ user.id }} </td>
+            <td style="color:#ff5100;"> {{ user.userName }} </td>
+            <td style="color:#ff5100;"> {{ user.emailId }} </td>
+
+           <!-- <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td> -->
+        </tr>
+    </tbody>
+</table>

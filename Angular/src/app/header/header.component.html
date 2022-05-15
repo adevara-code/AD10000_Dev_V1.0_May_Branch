@@ -1,0 +1,27 @@
+<header>
+    <nav class="navbar navbar-expand-sm bg-primary">    
+        <div>    
+        <h1 style="color: rgb(239, 246, 247);" aria-flowto="color">ADSOFT JOBS</h1>
+        </div>
+    <ul class="navbar-nav">
+       
+      <li><a *ngIf="loginService.isUserLoggedIn()" style="color: white;" routerLink="/" class="nav-link">View Employees</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn()" style="color: white;"   routerLink="/create-employee" class="nav-link">Add New Employee</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn()" style="color: white;"   routerLink="/users" class="nav-link">User List</a></li>
+      <li><a *ngIf="!loginService.isUserLoggedIn()" style="color: white;"  routerLink="/login" class="nav-link">Login</a></li>
+      <li><a *ngIf="loginService.isUserLoggedIn()" style="color: white;" routerLink="/logout" class="nav-link" >LogOut</a></li>
+     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div class="float-right" style="color: rgb(255, 255, 255);" >
+      <div class="score clock">
+        <h3 class="float-right">Welcome {{employee}}, LoginDate: {{ time | date: 'M.d.yy' }}, Time:{{ time | date: 'hh:mm:ss' }}</h3>
+       <!-- <div class="score-title">Current Time - {{ time | timerLabel}}</div>
+        <div class="score-stat time">{{ time | date: 'hh:mm:ss' }}</div>
+        <div class="score-stat-post">{{ time | date: 'M.d.yy' }}</div> -->
+   </div>
+   
+    </div>
+    </ul>
+      </nav>
+      <h2 style="color: rgb(243, 34, 7);"><marquee behavior="" direction="">Welcome ADSOFT JOBS</marquee></h2>
+    </header>
+    
+  

@@ -1,0 +1,113 @@
+<!--<Div fxLayoutAlign="center center" fxFlexFill class="main-div">
+<mat-card fxFlex="25">
+<mat-toolbar color="primary">AD SOFT Login Page</mat-toolbar>
+<form fxLayoutAlign="stretch" fxLayout="column" class="login-form" [formGroup]="formGroup" (ngSubmit)="loginProcess()">
+    <mat-form-field >
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="username" formControlName="email" >
+    </mat-form-field>
+  
+    <mat-form-field >
+      <mat-label>Password</mat-label>
+      <input type="password" matInput placeholder="password" formControlName="password">
+    </mat-form-field>
+    <button color="red" mat-raised-button type="submit" color="primary">Login</button>
+  </form>
+</mat-card>
+</Div> -->
+<!--
+<h2>Login</h2>
+<form [formGroup]="loginfrm" (ngSubmit)="onSubmit()" (ngSubmit)="CheckUser()"  style="color: rgb(34, 152, 231);">
+  <div class="form-group">
+      <label for="username">Username</label>
+      <input type="text" formControlName="username" class="form-control" placeholder="Enter Username" formControlName="username" />
+  </div>
+  <div class="form-group">
+      <label for="password">Password</label>
+      <input type="password" formControlName="password" class="form-control" placeholder="Enter Password" formControlName="password" />
+  </div>
+  <div class="form-group">
+      <button  class="btn btn-primary">
+          Login
+      </button>
+      <a routerLink="/register" class="btn btn-link">Register</a>
+  </div>
+</form>   -->
+<div class="container">
+ <div class="card">
+   <h4 class="card-header" style="color: blue;">Login</h4>
+     <div class="card-body">
+<div class="container">
+    <div>
+    <label for="username" style="color: blue;">Username</label>
+    <input type="text" name="username" (ngModel)="username" style="color: blue;" class="form-control"  placeholder="Enter Username"> <br><br>
+    <label for="password" style="color: blue;">Password</label>
+    <input type="password" name="password" (ngModel)="password" class="form-control"  placeholder="Enter Password"><br><br>
+  </div>
+  <button (click)=checkLogin()  class="btn btn-primary">&nbsp;&nbsp; Login </button>
+  <a routerLink="../register" class="btn btn-primary"> Register </a>
+</div>
+</div>
+</div>
+</div>
+
+<!--
+  login working example 
+<div class="container">
+  <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-primary"> ADSOFT User Login </h1>
+  <form #loginform="ngForm" (ngSubmit)="loginUser()" style="color: rgb(34, 152, 231);">{{loginform.form.valid}}
+    <small style="color: #f80c0c;">{{msg}}</small>
+    
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" class="form-control"  placeholder="Enter your register Email Id" name="email" [(ngModel)]="user.emailId" required  pattern="[a-zA-Z0-9.-]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{3,}"       
+       #email="ngModel"
+      [class.is-invalid]="email.invalid && email.touched">
+     <!-- <small class="text-danger" [class.d-none]="email.valid || email.untouched">Email Id required field </small> -->
+     <!--  <div *ngIf="email.errors && (email.invalid && email.touched)">
+         <small class="text-danger" *ngIf="email.errors.required">Email Id connot be empty</small>
+          <small class="text-danger" *ngIf="email.errors.required"> Enter the valid Email Id</small>
+        </div>
+    </div>
+    
+    <div class="form-group">  
+      <label for="pwd">Password:</label>
+      <input type="password" class="form-control" placeholder="Enter password" name="pwd" [(ngModel)]="user.password" required #pwd="ngModel"
+      [class.is-invalid]="pwd.invalid && pwd.touched">
+      <small class="text-danger" [class.d-none]="pwd.valid || pwd.untouched">Password cannot be empty</small>
+    </div>
+
+    <div class="checkbox">
+      <label><input type="checkbox" name="remember"> Remember me</label>
+    </div>
+
+    <button [disabled]="loginform.form.invalid" type="submit" class="btn btn-info"> Login </button> -->
+    <!--<small (click)=userRegistration() routerLink="/userRegistraion" [routerLink]="['/userRegistraion']"> New User ? Sign Up </small>-->
+   <!-- <a routerLink="/userRegistraion" class="btn btn-link">New User ? Sign Up</a> 
+
+  </form>
+</div>
+-->
+
+
+
+
+
+
+
+
+
+
+<!--
+
+<form [formGroup]="loginfrm" (ngSubmit)="CheckUser()"  style="color: rgb(34, 152, 231);">
+  Username: <input type="text"     id="username" name="username"     placeholder="Enter Username" formControlName="username"><br><br>
+  Password: <input type="password" id="password" name="password"     placeholder="Enter Password" formControlName="password"><br>
+<div>
+  <button type="submit">Login</button><br>
+  <a routerLink="/register" class="btn btn-link">Register</a>
+</div>
+</form>
+-->
+
+
